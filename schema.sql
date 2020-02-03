@@ -27,7 +27,6 @@ CREATE TABLE register (
     `dob` DATE NOT NULL,
     `height` INTEGER NOT NULL,
     `weight` INTEGER NOT NULL,
-    `age` INTEGER NOT NULL,
     PRIMARY KEY(id)
 );
 
