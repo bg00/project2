@@ -1,4 +1,5 @@
-
+const render = function() {
+    return `
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en">
@@ -28,16 +29,29 @@
 
 
 <div class="large-9 push-3 columns">
-  <form>
-  <div class="sign-in-form">
-    <h4 class="text-center">Sign In</h4>
-    <label for="sign-in-form-username">Username</label>
-    <input type="text" class="sign-in-form-username" id="sign-in-form-username">
-    <label for="sign-in-form-password">Password</label>
-    <input type="text" class="sign-in-form-password" id="sign-in-form-password">
-    <button type="submit" class="sign-in-form-button">Sign In</button>
+<form class="callout text-center">
+  <h2>Track your workouts over time!</h2>
+  <div class="floated-label-wrapper">
+    <label for="date">Date of run</label>
+    <input type="date" id="time" name="date and time" placeholder="Date">
   </div>
+  <div class="floated-label-wrapper">
+    <label for="full-name">Miles ran</label>
+    <input type="number" id="full-name" name="full name input" placeholder="Miles">
+  </div>
+  <div class="floated-label-wrapper">
+    <label for="email">Calories burned</label>
+    <input type="number" id="email" name="email input" placeholder="Calories">
+  </div>
+  <button type="submit" class="progress-form-button">Track this run!</button>
+  <button type="clear" class="progress-form-button">Wanna start over?</button>
 </form>
+
+
+
+
+
+
 </div>
 
 
@@ -57,5 +71,7 @@
 <script>
       $(document).foundation();
     </script>
+  <script src="/script.js"></script>
 </body>
-</html>
+</html> `
+}

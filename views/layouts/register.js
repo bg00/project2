@@ -1,4 +1,5 @@
-
+const render = function() {
+    return `
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en">
@@ -94,4 +95,5 @@
       $(document).foundation();
     </script>
 </body>
-</html>
+</html> `
+}
