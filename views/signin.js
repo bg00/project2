@@ -1,15 +1,5 @@
 const render = function() {
     return `
-    <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foundation 5</title>
-
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 <div class="row">
 <div class="large-3 columns">
 <h1><img src="https://i.ibb.co/ZB5GdDJ/7e4f933c-6533-4784-84f2-e91e9f6d7c45-200x200.png"></a></h1>
@@ -44,6 +34,7 @@ const render = function() {
       $(document).foundation();
     </script>
 </body>
-</html>
     `
 }
+
+exports.render = render;
