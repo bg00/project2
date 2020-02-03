@@ -6,12 +6,20 @@ const db = require("../models");
 
 const mainLayoutView = require('../views/layouts/main.js');
 const registerLayoutView = require('../views/register.js');
+const signLayoutView = require('../views/signin.js')
 
 // Routes
 
 module.exports = function(app) {
- 
+
   app.get('/', function(req, res) {
+    db.registers.findAll().then(function(data) {
+      console.log(data);
+      res.send(mainLayoutView.render(signLayoutView.render()))
+    });
+  });
+ 
+  app.get('/register', function(req, res) {
     db.registers.findAll().then(function(data) {
       console.log(data);
       res.send(mainLayoutView.render(registerLayoutView.render()))
