@@ -13,7 +13,7 @@ $(function() {
         };
         
         // Send the POST request - 
-        $.ajax("/api/burgers", {
+        $.ajax("/api/registers", {
             type: "POST",
             data: registerData
         }).then(
@@ -38,9 +38,9 @@ $(function() {
         weight: $('weight').val('')
     };
         // Send the POST request
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: updatedBurger
+        $.ajax("/api/registers/", {
+            type: "POST",
+            data: registerData
         }).then(
             function() {
                 console.log("Changed devoured to 1");
