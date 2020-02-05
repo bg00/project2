@@ -16,13 +16,13 @@
 
 ### Technologies Usedd
 
-Server: Node.js (RESTFUL API on Express JS)
-ORM layer: Sequelize (promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server)
-Testing: Mocha/Chai
-Continuous Integration : Travis
-Client Side: HTML5, CSS3 (Foundation), ES6 Javascript
-Automation: npm scripts
-RESTFul API: Fitbit
+1. Server: Node.js (RESTFUL API on Express JS)
+2. ORM layer: Sequelize (promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server)
+3. Testing: Mocha/Chai
+4. Continuous Integration : Travis
+5. Client Side: HTML5, CSS3 (Foundation), ES6 Javascript
+6. Automation: npm scripts
+7. RESTFul API: Fitbit
 
 ### Design Paradigm
 
