@@ -17,7 +17,6 @@ $(function() {
     });
 });
 
-
 // end of progress page form
 
 // API for Pics page - Flickr

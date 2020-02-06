@@ -1,5 +1,5 @@
 const render = function() {
-    return `
+  return `
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en">
@@ -67,5 +67,5 @@ const render = function() {
     <script src="/script.js"></script>
 </body>
 
-</html> `
-}
+</html> `;
+};

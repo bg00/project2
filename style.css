@@ -1,6 +1,6 @@
 .sign-in-form {
   padding: 1rem 1.5em;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #3d454f;
 }
 
@@ -24,15 +24,15 @@
 }
 
 .sign-in-form input:focus {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .sign-in-form-username,
 .sign-in-form-password {
   border-radius: 30px;
   border: none;
-  opacity: .1;
-  transition: all ease .4s;
+  opacity: 0.1;
+  transition: all ease 0.4s;
 }
 
 .sign-in-form-button {
@@ -44,14 +44,13 @@
   letter-spacing: 1px;
   width: 100%;
   padding: 1rem;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 }
 
 .sign-in-form-button:hover {
   background-color: #44c8ed;
   border-color: #44c8ed;
 }
-
 
 .floated-label-wrapper {
   position: relative;
@@ -71,8 +70,8 @@
   z-index: -1;
 }
 
-.floated-label-wrapper label input[type=date],
-.floated-label-wrapper label input[type=number] {
+.floated-label-wrapper label input[type="date"],
+.floated-label-wrapper label input[type="number"] {
   border-radius: 4px;
   font-size: 1.75em;
   padding: 0.5em;
@@ -93,14 +92,13 @@
   letter-spacing: 1px;
   width: 100%;
   padding: 1rem;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 }
 
 .progress-form-button:hover {
   background-color: #44c8ed;
   border-color: #44c8ed;
 }
-
 
 .featured-image-block-grid-header {
   margin-left: auto;
@@ -124,43 +122,42 @@
 
 .masonry-css {
   -webkit-column-count: 5;
-          column-count: 5;
+  column-count: 5;
   -webkit-column-gap: 3rem;
-          column-gap: 3rem;
+  column-gap: 3rem;
 }
 
 @media screen and (min-width: 25em) {
   .masonry-css {
     -webkit-column-count: 5;
-            column-count: 5;
+    column-count: 5;
   }
 }
 
 @media screen and (min-width: 37.5em) {
   .masonry-css {
     -webkit-column-count: 3;
-            column-count: 3;
+    column-count: 3;
   }
 }
 
 @media screen and (min-width: 50em) {
   .masonry-css {
     -webkit-column-count: 5;
-            column-count: 5;
+    column-count: 5;
   }
 }
 
 @media screen and (min-width: 68.75em) {
   .masonry-css {
     -webkit-column-count: 5;
-            column-count: 5;
+    column-count: 5;
   }
 }
 
-.masonry-css-item, .masonry-css-text {
+.masonry-css-item,
+.masonry-css-text {
   -webkit-column-break-inside: auto;
-          break-inside: auto;
+  break-inside: auto;
   margin-bottom: 1rem;
 }
-
-
