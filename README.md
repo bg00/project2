@@ -1,19 +1,44 @@
-* **The requirements for Project #2 are as follows:**
+# RunnerTrackingApp
 
-  * Must use a Node and Express Web Server
+### What the user can do?
 
-  * Must be backed by a MySQL Database with a Sequelize ORM  
+1. Register
+2. Login: email, password
+3. See his previous posts
+4. See all posts from other users on the platform
+5. Create a new posts(run)
+6. Update an existing post.
+7. Delete a post
+8. Change his avatar
+9. Change his full name
+10. Change his display name
+11. Delete his account
 
-  * Must have both GET and POST routes for retrieving and adding new data
+### Technologies Usedd
 
-  * Must be deployed using Heroku (with Data)
+Server: Node.js (RESTFUL API on Express JS)
+ORM layer: Sequelize (promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server)
+Testing: Mocha/Chai
+Continuous Integration : Travis
+Client Side: HTML5, CSS3 (Foundation), ES6 Javascript
+Automation: npm scripts
+RESTFul API: Fitbit
 
-  * Must utilize at least one new library, package, or technology that we haven’t discussed
+### Design Paradigm
 
-  * Must have a polished frontend / UI 
+1. Mobile-friendly
+2. Responsive Web design (RWD)
+3. ally - measure of how accessible a computer system is to all people, including those with disabilities or impairments
+4. Search Engine Optimization 
+5. Cross-browser compatibility 
 
-  * Must have folder structure that meets MVC Paradigm
+### Directory Structure 
 
-  * Must meet good quality coding standards (indentation, scoping, naming)
+Model View Controller Pattern 
 
-  * Must not expose sensitive API key information on the server, see [Protecting-API-Keys-In-Node.md](../../../../01-Class-Content/10-nodejs/03-Supplemental/Protecting-API-Keys-In-Node.md)
+### [Demo]
+
+
+
+
+

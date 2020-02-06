@@ -12,14 +12,7 @@ DROP DATABASE IF EXISTS `runner_tracker_db`;
 CREATE DATABASE `runner_tracker_db`;
 USE `runner_tracker_db`;
 
-CREATE TABLE loginDB (
-    `id` INT AUTO_INCREMENT NOT NULL ,
-    `username` VARCHAR(50) NOT NULL UNIQUE,
-    `password` VARCHAR(255) NOT NULL,
-    PRIMARY KEY(id)
-);
-
-CREATE TABLE register (
+CREATE TABLE user (
     `id` INT AUTO_INCREMENT NOT NULL,
     `username` VARCHAR(50) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL,
@@ -27,7 +20,6 @@ CREATE TABLE register (
     `dob` DATE NOT NULL,
     `height` INTEGER NOT NULL,
     `weight` INTEGER NOT NULL,
-    `age` INTEGER NOT NULL,
     PRIMARY KEY(id)
 );
 
