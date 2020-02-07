@@ -1,0 +1,117 @@
+body {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  header {
+    background: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .logo {
+    padding: 1.8em 1em;
+  }
+  
+  header nav ul {
+    list-style: none;
+  }
+  
+  header nav li {
+    display: inline-block;
+    padding: 0 2.4em;
+  }
+  
+  header nav li a {
+    color: #242424;
+    transition: color 0.2s;
+  }
+  
+  header nav li a:hover {
+    color: #505050;
+  }
+  
+  .register-block {
+    display: block;
+    background: #e66b00;
+    height: 0.4em;
+  }
+  
+  .register-button {
+    position: relative;
+    margin-left: 75%;
+    display: inline-block;
+    background: #242424;
+    color: #fff;
+    padding: 0.4em 2em;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  
+  .register-button a {
+    color: #fff;
+    transition: color 0.2s;
+  }
+  
+  .register-button a:hover {
+    color: #e66b00;
+  }
+  
+  .hero {
+    background-image: url('/assets/img/splash.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .login-block {
+    position: absolute;
+    top: 25em;
+    margin-left: 65%;
+  }
+  
+  .login-section {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    padding: 2em 1em 1em;
+    width: 25em;
+  }
+  
+  h1, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  input {
+    width: 5px;
+  }
+  
+  button {
+    background: #242424;
+    font-family: 'Playfair Display', serif;
+    margin-top: 1em;
+  }
+  
+  button:hover {
+    background: #e66b00;
+  }
+  
+  a {
+    color: #e66b00;
+  }
+  
+  a:hover {
+    color: #b45400;
+  }
+  
+  .padding {
+    height: 25vh;
+  }

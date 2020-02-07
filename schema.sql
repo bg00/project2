@@ -23,13 +23,6 @@ CREATE TABLE user (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE displayHome (
-    `id` INT AUTO_INCREMENT NOT NULL, 
-    `register_id` INTEGER NOT NULL,
-    PRIMARY KEY(id),
-    FOREIGN KEY(register_id) REFERENCES register(id) ON DELETE CASCADE
-);
-
 CREATE TABLE progress(
     `id` INT AUTO_INCREMENT NOT NULL,
     `caloriesBurnt` INT NOT NULL,

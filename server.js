@@ -1,28 +1,28 @@
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+//const customAuthMiddleware = require('./middleware/custom-auth-middleware');
+const express = require("express");
 
-
-// Dependencies
-// =============================================================
-var express = require("express");
+//Directory references 
 const db = require('./models');
 
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+let app = express();
+let PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory to be served
-app.use(express.static("./public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-// Routes
-// =============================================================
+app.use(cookieParser());
+//app.use(customAuthMiddleware);
+
+app.use(express.static(__dirname + "/public"));
+
 require("./routes/api-routes.js")(app);
+//require("./routes/html-routes.js")(app);
 
-// Starts the server to begin listening
-// =============================================================
 db.sequelize.sync().then(function(){ 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

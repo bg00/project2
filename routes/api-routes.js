@@ -1,42 +1,77 @@
 // Dependencies
-
 const db = require("../models");
 
 // Import the views to complete MVC workflow
 
-const mainLayoutView = require('../views/layouts/main.js');
-const registerLayoutView = require('../views/register.js');
-const signLayoutView = require('../views/signin.js')
-
-// Routes
+ const mainLayoutView = require('../views/layouts/main.js');
+ const registerLayoutView = require('../views/register.js');
+ const signLayoutView = require('../views/signin.js');
+ const homeLayoutView = require('../views/home.js')
 
 module.exports = function(app) {
-
+  
   app.get('/', function(req, res) {
-    db.registers.findAll().then(function(data) {
+    console.log("Home called again");
+    db.user.findAll({
+      attributes: {
+        exclude: ['password']
+      }
+    }).then(function(data) {
       console.log(data);
+      //res.json(data);
       res.send(mainLayoutView.render(signLayoutView.render()))
     });
   });
  
-  app.get('/register', function(req, res) {
-    db.registers.findAll().then(function(data) {
-      console.log(data);
-      res.send(mainLayoutView.render(registerLayoutView.render()))
-    });
-  });
+  app.get('/api/registers', function(req, res) {
+    console.log("rendering regiser layout");
+    
 
-  // Create a new example
-  app.post("/api/registers", function(req, res) {
-    db.registers.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+   res.send(mainLayoutView.render(registerLayoutView.render()));
+    db.user.findAll({}).then(function(data) {
+      res.json(data);
+    })
 
-  // Delete an example by id
-  app.delete("/api/registers/:id", function(req, res) {
-    db.registers.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  } );
+
+app.get("/api/home", function(req, res) {
+  const username = req.query.username;
+    const password = req.query.password;
+
+    console.log(username);
+    console.log(password);
+
+       db.user.findAll()
+        .then(function(data) {
+          for(let i=0; i < data.length; i++) {
+            console.log(data[i].dataValues.username);
+            console.log(data[i].dataValues.password);
+          
+          if(data[i].dataValues.username === username && data[i].dataValues.password === password) {
+           console.log("In here");
+            res.send(mainLayoutView.render(homeLayoutView.render()));
+            break;
+          }
+          console.log("out of if loop");
+        }
+        console.log("out of for loop");
+        
+        })
+})
+
+  app.post("/api/registersubmit", function(req, res) {
+    console.log("Entering saving the data", req.body);
+      db.user.create({
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
+        age: req.body.age,
+        height: req.body.height,
+        weight: req.body.weight,
+      })
+      .then(function(data){
+        console.log(data);
+        res.json(data);
+      })
   });
-};
+}
